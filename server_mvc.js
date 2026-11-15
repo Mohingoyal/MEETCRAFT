@@ -2,7 +2,11 @@ var express = require("express");
 let app = express();
 var cors = require("cors");
 app.use(express.json());//converts
-app.use(cors());
+app.use(cors(
+    {
+        origin:"https://meetcraftvite.vercel.app",credentials:true
+    }
+));
 
 //=============
 const dns = require("dns");
